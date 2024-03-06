@@ -1,11 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
+import type { Genders, FormErrors } from '../types';
 
-type Errors = {
-  name?: string;
-  gender?: string;
-  duration?: string;
-};
-type Genders = 'Male' | 'Female' | 'Other';
 const genders: Genders[] = ['Male', 'Female', 'Other'];
 
 const apiUrl = import.meta.env.VITE_API_URL;
@@ -23,7 +18,7 @@ const InputForm = () => {
     name: '',
     gender: genders[0],
     duration: 8,
-    errors: {} as Errors,
+    errors: {} as FormErrors,
     loading: false,
   });
   const [error, setError] = useState<string | null>(null);
@@ -37,7 +32,7 @@ const InputForm = () => {
 
   // some basic validaion
   const validateForm = () => {
-    const errors: Errors = {};
+    const errors: FormErrors = {};
 
     // Check if username is empty
     if (!formData.name) {

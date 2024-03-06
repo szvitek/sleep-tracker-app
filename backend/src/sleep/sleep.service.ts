@@ -51,6 +51,7 @@ export class SleepService {
             count: { $sum: 1 },
           },
         },
+        { $sort: { '_id.name': 1 } },
       ])
       .exec();
   }

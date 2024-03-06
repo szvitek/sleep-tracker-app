@@ -56,7 +56,7 @@ app is running on: http://localhost:5173/
 ## Tasks:
 
 - [x]: (frontend): build a form
-- [ ]: (frontend): create a page with a table
+- [x]: (frontend): create a page with a table
 - [ ]: (frontend): create a chart with echart
 - [x]: (backend): setup mongoose
 - [x]: (backend): seed db with sample data
