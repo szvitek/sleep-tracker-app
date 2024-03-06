@@ -4,7 +4,15 @@
 
 ### Config:
 
+backend:
 provide a `MONGO_URI` env variable to connect to database
+
+frontend:
+
+create .env file in the frontend folder:
+| env variable | example
+| --- | --- |
+|`VITE_API_URL` | http://localhost:3000 |
 
 ### backend (NestJS app):
 
@@ -32,9 +40,11 @@ $ npm i
 $ npm run dev
 ```
 
+app is running on: http://localhost:5173/
+
 ## Tasks:
 
-- [ ]: (frontend): build a form
+- [x]: (frontend): build a form
 - [ ]: (frontend): create a page with a table
 - [ ]: (frontend): create a chart with echart
 - [ ]: (backend): setup mongoose
