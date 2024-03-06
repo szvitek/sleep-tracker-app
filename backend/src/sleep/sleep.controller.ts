@@ -7,6 +7,11 @@ import { Sleep } from './schemas/sleep.schema';
 export class SleepController {
   constructor(private readonly sleepService: SleepService) {}
 
+  @Get('/seed')
+  async seedDatabase() {
+    return this.sleepService.seed();
+  }
+
   @Post()
   async create(@Body() createSleepDto: CreateSleepDto) {
     console.log('post', createSleepDto);
