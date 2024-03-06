@@ -5,14 +5,18 @@
 ### Config:
 
 backend:
-provide a `MONGO_URI` env variable to connect to database
+
+create .env file in the frontend folder:
+| env variable | example
+| --- | --- |
+|`MONGO_URI` | `mongodb+srv://...` |
 
 frontend:
 
 create .env file in the frontend folder:
 | env variable | example
 | --- | --- |
-|`VITE_API_URL` | http://localhost:3000 |
+|`VITE_API_URL` | `http://localhost:3000` |
 
 ### backend (NestJS app):
 
@@ -29,6 +33,8 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+app is running on: http://localhost:3000/
 
 ### frontend (React vite app):
 
@@ -47,7 +53,7 @@ app is running on: http://localhost:5173/
 - [x]: (frontend): build a form
 - [ ]: (frontend): create a page with a table
 - [ ]: (frontend): create a chart with echart
-- [ ]: (backend): setup mongoose
-- [ ]: (backend): POST route for create new entry
+- [x]: (backend): setup mongoose
+- [x]: (backend): POST route for create new entry
 - [ ]: (backend): GET route for populate the table
 - [ ]: (backend): GET route for populate the chart
