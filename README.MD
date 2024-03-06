@@ -62,4 +62,4 @@ app is running on: http://localhost:5173/
 - [x]: (backend): seed db with sample data
 - [x]: (backend): POST route for create new entry
 - [x]: (backend): GET route for populate the table
-- [ ]: (backend): GET route for populate the chart
+- [x]: (backend): GET route for populate the chart

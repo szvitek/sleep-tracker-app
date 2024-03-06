@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { SleepService } from './sleep.service';
 import { CreateSleepDto } from './dto/create-sleep.dto';
 import { Sleep } from './schemas/sleep.schema';
@@ -21,5 +21,10 @@ export class SleepController {
   @Get()
   async findAll(): Promise<Sleep[]> {
     return this.sleepService.findAll();
+  }
+
+  @Get('/:name')
+  async findByName(@Param('name') name: string): Promise<Sleep[]> {
+    return this.sleepService.findByName(name);
   }
 }

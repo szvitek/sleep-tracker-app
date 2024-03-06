@@ -54,4 +54,8 @@ export class SleepService {
       ])
       .exec();
   }
+
+  async findByName(name: string): Promise<Sleep[]> {
+    return this.sleepModel.find({ name }).sort({ date: -1 }).limit(7).exec();
+  }
 }
