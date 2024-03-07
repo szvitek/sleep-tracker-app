@@ -24,11 +24,11 @@ export class SleepService {
     users.forEach((user) => {
       for (let i = 0; i < 10; i++) {
         const date = new Date();
-        date.setDate(date.getDate() - i);
+        date.setDate(date.getDate() - i + 1);
         data.push({
           name: user.name,
           gender: user.gender,
-          duration: Math.floor(Math.random() * 12),
+          duration: Math.floor(Math.random() * 9) + 3,
           date: date,
         });
       }
