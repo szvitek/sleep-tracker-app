@@ -10,7 +10,6 @@ type SleepChartProps = {
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const SleepChart = ({ name }: SleepChartProps) => {
-  console.log('render');
   const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

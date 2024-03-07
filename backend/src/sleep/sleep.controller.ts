@@ -14,7 +14,6 @@ export class SleepController {
 
   @Post()
   async create(@Body() createSleepDto: CreateSleepDto) {
-    console.log('post', createSleepDto);
     return this.sleepService.create(createSleepDto);
   }
 
