@@ -38,6 +38,21 @@ const SleepChart = ({ name }: SleepChartProps) => {
       const response = await fetch(`${apiUrl}/api/sleeps/${name}`);
       const chartData: ChartData[] = await response.json();
 
+      const last7days = [];
+
+      for (let i = 7; i >= 0; i--) {
+        const today = new Date();
+        today.setDate(today.getDate() - i);
+        last7days.push(today.toISOString().substring(0, 10));
+      }
+
+      const durationArray = last7days.map((day) => {
+        const data = chartData.find(
+          ({ date }) => day === date.substring(0, 10)
+        );
+        return data?.duration ?? 0;
+      });
+
       const options = {
         title: {
           text: `Sleeping hours for ${name}`,
@@ -47,14 +62,14 @@ const SleepChart = ({ name }: SleepChartProps) => {
           data: ['duration'],
         },
         xAxis: {
-          data: chartData.map((d) => (d.date ?? '').substring(0, 10)).reverse(),
+          data: last7days,
         },
         yAxis: {},
         series: [
           {
             name: 'duration',
             type: 'bar',
-            data: chartData.map((d) => d.duration),
+            data: durationArray,
           },
         ],
       };

@@ -24,7 +24,7 @@ export class SleepService {
     users.forEach((user) => {
       for (let i = 0; i < 10; i++) {
         const date = new Date();
-        date.setDate(date.getDate() - i + 1);
+        date.setDate(date.getDate() - (i + 1));
         data.push({
           name: user.name,
           gender: user.gender,
@@ -57,6 +57,14 @@ export class SleepService {
   }
 
   async findByName(name: string): Promise<Sleep[]> {
-    return this.sleepModel.find({ name }).sort({ date: -1 }).limit(7).exec();
+    const today = new Date();
+
+    return this.sleepModel
+      .find({
+        name,
+        date: { $gte: new Date(today.setDate(today.getDate() - 8)) },
+      })
+      .sort({ date: -1 })
+      .exec();
   }
 }
