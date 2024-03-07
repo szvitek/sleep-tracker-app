@@ -63,3 +63,12 @@ app is running on: http://localhost:5173/
 - [x]: (backend): POST route for create new entry
 - [x]: (backend): GET route for populate the table
 - [x]: (backend): GET route for populate the chart
+
+## Screenshots:
+
+| task                                                                        | demo                                                                               |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| submit the form for a new user                                              | ![screenshots/submit-form.gif](screenshots/submit-form.gif)                        |
+| display table and chart data                                                | ![screnshots/display-table-and-chart.gif](screenshots/display-table-and-chart.gif) |
+| add new record for an existing user                                         | ![screenshots/add-new-record.gif](screenshots/add-new-record.gif)                  |
+| if name is passed as a query param, it will display the chart automatically | ![screenshots/query-param.gif](screenshots/query-param.gif)                        |
