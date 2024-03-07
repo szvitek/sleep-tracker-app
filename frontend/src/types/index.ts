@@ -10,3 +10,10 @@ export type TableData = {
   _id: { name: string; gender: Genders };
   count: number;
 };
+
+export type ChartData = {
+  name: string;
+  gender: Genders;
+  duration: number;
+  date: string;
+};

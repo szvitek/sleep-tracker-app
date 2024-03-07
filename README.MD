@@ -57,7 +57,7 @@ app is running on: http://localhost:5173/
 
 - [x]: (frontend): build a form
 - [x]: (frontend): create a page with a table
-- [ ]: (frontend): create a chart with echart
+- [x]: (frontend): create a chart with echart
 - [x]: (backend): setup mongoose
 - [x]: (backend): seed db with sample data
 - [x]: (backend): POST route for create new entry

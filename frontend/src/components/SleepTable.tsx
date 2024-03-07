@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { TableData } from '../types';
 
 type TableDataProps = {
@@ -38,4 +39,4 @@ const SleepTable = ({ data, handleRowClick }: TableDataProps) => {
     </div>
   );
 };
-export default SleepTable;
+export default memo(SleepTable);
